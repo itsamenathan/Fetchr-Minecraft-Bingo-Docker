@@ -22,7 +22,7 @@ if [ ! -f "/data/complete.flag" ]; then
   wget https://github.com/CaffeineMC/phosphor-fabric/releases/download/mc1.16.2-0.8.0/phosphor-fabric-mc1.16.2-0.8.0.jar
 
 
-d /data
+  cd /data
 
   cp /server.properties server.properties
 
@@ -30,5 +30,7 @@ d /data
 
   touch complete.flag
 
-  java -Xmx2G -jar fabric-server-mc.1.16.5-loader.0.14.9-launcher.0.11.1.jar nogui
 fi
+
+cd /data
+java -Xmx4G -jar fabric-server-mc.1.16.5-loader.0.14.9-launcher.0.11.1.jar nogui
